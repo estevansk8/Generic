@@ -2,24 +2,14 @@ import java.util.List;
 
 public interface GenericDAO<K, T> {
 
-    default void insert(T client){
+    void insert(T object);
 
-    }
+    T findOne(K key);
 
-    public default Client findOne(K key){
-        return null;
-    }
+    List<T> findAll();
 
-    public default List<Client> findAll(){
-        return null;
-    }
+    void update(T client);
 
-    public default void update(T client){
-
-    }
-
-    public default void remove(K key){
-
-    }
+    void remove(K key);
 }
 
